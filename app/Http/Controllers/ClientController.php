@@ -14,16 +14,12 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $cliente = Client::find(2);
+       
+        $clients = Client::all();
 
-        $cliente->name = 'Lelis Jose';
-        $cliente->save();
-        $cliente = Client::find(2);
+        //return $clients;
 
-        return $cliente->name . ' - ' . 
-        $cliente->email;
-
-        //return 'ola mundo sem porteira';
+        return view('clients.index', compact(['clients']));
     }
 
     /**
