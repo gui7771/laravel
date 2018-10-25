@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Client;
 
 class ClientController extends Controller
 {
@@ -13,7 +14,16 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return 'ola mundo';
+        $cliente = Client::find(2);
+
+        $cliente->name = 'Lelis Jose';
+        $cliente->save();
+        $cliente = Client::find(2);
+
+        return $cliente->name . ' - ' . 
+        $cliente->email;
+
+        //return 'ola mundo sem porteira';
     }
 
     /**
@@ -23,7 +33,14 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        $cliente = new Client();
+        $cliente-> name='Paulo';
+        $cliente-> email='paulo@teste.com.br';
+        $cliente-> year='2019';
+        $cliente-> obs='observacao';
+        $cliente-> save();
+
+        return $cliente;
     }
 
     /**
