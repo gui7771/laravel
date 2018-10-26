@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Clientes</div>
+                <div class="card-header">Produtos</div>
 
                 <div class="card-body">
 
@@ -13,21 +13,19 @@
                             <tr>
                                 <th>id</th>
                                 <th>name</th>
-                                <th>email</th>
-                                <th>year</th>
+                                <th>value</th>
                                 <th>obs</th>
                             </tr>
-                        @foreach($clients as $client)
+                        @foreach($products as $product)
                             <tr>
                                 <td>{{$client->id }}</td>
                                 <td>{{$client->name}}</td>
-                                <td>{{$client->email}}</td>
-                                <td>{{$client->year}}</td>
+                                <td>{{$client->value}}</td>
                                 <td>{{$client->obs}}</td>
                             </tr>
                         @endforeach
                     </table>
-                    {{$clients->links()}}
+                    {{$products->links()}}
                 </div>
             </div>
         </div>
