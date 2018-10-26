@@ -14,7 +14,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::paginate(1);
+
+        //return $clients;
+
+        return view('products.index', compact(['products']));
     }
 
     /**
@@ -24,7 +28,13 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $produto = new Product();
+        $produto-> name='produto';
+        $produto-> value='teste';
+        $produto-> obs='2019';
+        $produto-> save();
+
+        return $produto;
     }
 
     /**

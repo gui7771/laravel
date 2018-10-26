@@ -23,6 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/clientes', 'ClientController@index')->name('clients.index');
 
+Route::resource('produtos', 'ProductController');
+
 Route::get('/clientes-inserir', 'ClientController@create');
 
 

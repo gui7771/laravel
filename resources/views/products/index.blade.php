@@ -18,10 +18,10 @@
                             </tr>
                         @foreach($products as $product)
                             <tr>
-                                <td>{{$client->id }}</td>
-                                <td>{{$client->name}}</td>
-                                <td>{{$client->value}}</td>
-                                <td>{{$client->obs}}</td>
+                                <td>{{$product->id }}</td>
+                                <td>{{$product->name}}</td>
+                                <td>{{$product->value}}</td>
+                                <td>{{$product->obs}}</td>
                             </tr>
                         @endforeach
                     </table>
