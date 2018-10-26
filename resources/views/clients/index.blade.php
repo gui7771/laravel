@@ -8,14 +8,26 @@
                 <div class="card-header">Clientes</div>
 
                 <div class="card-body">
-                    @foreach($clients as $client)
-                        {{ $client->id }}
-                        {{$client->name}}
-                        {{$client->email}}
-                        {{$client->year}}
-                        {{$client->obs}}
 
-                    @endforeach
+                    <table class="table">
+                            <tr>
+                                <th>id</th>
+                                <th>name</th>
+                                <th>email</th>
+                                <th>year</th>
+                                <th>obs</th>
+                            </tr>
+                        @foreach($clients as $client)
+                            <tr>
+                                <td>{{$client->id }}</td>
+                                <td>{{$client->name}}</td>
+                                <td>{{$client->email}}</td>
+                                <td>{{$client->year}}</td>
+                                <td>{{$client->obs}}</td>
+                            </tr>
+                        @endforeach
+                    </table>
+
                 </div>
             </div>
         </div>
