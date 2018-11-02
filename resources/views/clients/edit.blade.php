@@ -11,7 +11,7 @@
 
                         {{csrf_field()}}
 
-                        {{method_field('POST')}}
+                        {{method_field('PUT')}}
 
                         <div class="form-group">
                             <label class="">Nome</label>

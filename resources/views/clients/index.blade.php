@@ -21,6 +21,7 @@
                                 <th>email</th>
                                 <th>year</th>
                                 <th>obs</th>
+                                <th>actions</th>
                             </tr>
                         @foreach($clients as $client)
                             <tr>
@@ -29,6 +30,7 @@
                                 <td>{{$client->email}}</td>
                                 <td>{{$client->year}}</td>
                                 <td>{{$client->obs}}</td>
+                                <td><a href="{{route('clients.edit', $client->id)}}" class="btn btn-warning">Edit</a></td>
                             </tr>
                         @endforeach
                     </table>

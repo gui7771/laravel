@@ -15,7 +15,7 @@ class ClientController extends Controller
     public function index()
     {
        
-        $clients = Client::paginate(1);
+        $clients = Client::paginate(10);
 
         //return $clients;
 
@@ -43,6 +43,15 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         //
+
+        $client = new Client();
+        $client->name = $request->name;
+        $client->email = $request->email;
+        $client->year = $request->year;
+        $client->obs = $request->obs;
+        $client->save();
+
+        return redirect(route('clients.index'));
     }
 
     /**
@@ -64,7 +73,9 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        //
+        $client = Client::find($id) ;
+
+        return $client;
     }
 
     /**
