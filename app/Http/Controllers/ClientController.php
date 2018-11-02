@@ -29,14 +29,9 @@ class ClientController extends Controller
      */
     public function create()
     {
-        $cliente = new Client();
-        $cliente-> name='Paulo';
-        $cliente-> email='paulo@teste.com.br';
-        $cliente-> year='2019';
-        $cliente-> obs='observacao';
-        $cliente-> save();
 
-        return $cliente;
+        return view('clients.create');
+
     }
 
     /**

@@ -9,6 +9,11 @@
 
                 <div class="card-body">
 
+                    <div class="col-md-12 text-right" >
+                        <a href="{{route('clients.create')}}" class="btn btn-success">Adicionar</a>
+
+                    </div>
+                    <br>
                     <table class="table">
                             <tr>
                                 <th>id</th>
