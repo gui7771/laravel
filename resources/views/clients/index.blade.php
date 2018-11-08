@@ -30,7 +30,16 @@
                                 <td>{{$client->email}}</td>
                                 <td>{{$client->year}}</td>
                                 <td>{{$client->obs}}</td>
-                                <td><a href="{{route('clients.edit', $client->id)}}" class="btn btn-warning">Edit</a></td>
+                                <td>
+                                    <a href="{{route('clients.edit', $client->id)}}" class="btn btn-warning">Edit</a>
+                                    <a href="#" class="btn btn-danger" onclick="event.preventDefault();
+                                                     document.getElementById('delete-form-{{$client->id}}').submit();">Delete</a>
+
+                                    <form id="delete-form-{{$client->id}}" action="{{ route('clients.destroy', $client->id) }}" method="POST" style="display: none;">
+                                        @csrf
+                                        {{method_field('DELETE')}}
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                     </table>
