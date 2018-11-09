@@ -39,6 +39,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $validate = $request->validate(['name' => 'required|min:4|max:100',
+                                        'value' => 'required|integer']);
 
         Product::create($request->only('name', 'value', 'obs'));
 
