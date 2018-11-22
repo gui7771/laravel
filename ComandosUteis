@@ -4,3 +4,10 @@ php artisan migrate:refresh
 php artisan make:model Product -all (cria controller migrate e paranaues a partes)php
 
 php artisan migrate (sobe as aterações da migrate pro banco
+
+
+
+php artisan make:model Category --all
+php artisan make:migration add_id_category_products_table --table=products
+
+php artisan migrate
