@@ -27,6 +27,8 @@ Route::resource('clients', 'ClientController');
 
 Route::resource('products', 'ProductController');
 
+Route::resource('categories', 'CategoryController');
+
 Route::get('/clientes-inserir', 'ClientController@create');
 
 

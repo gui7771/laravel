@@ -19,6 +19,7 @@
                             <tr>
                                 <th>id</th>
                                 <th>name</th>
+                                <th>category</th>
                                 <th>value</th>
                                 <th>obs</th>
                                 <th>actions</th>
@@ -27,6 +28,7 @@
                             <tr>
                                 <td>{{$product->id }}</td>
                                 <td>{{$product->name}}</td>
+                                <td>{{@$product->category->name}}</td>
                                 <td>{{$product->value}}</td>
                                 <td>{{$product->obs}}</td>
                                 <td></td>

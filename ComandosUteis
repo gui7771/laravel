@@ -11,3 +11,5 @@ php artisan make:model Category --all
 php artisan make:migration add_id_category_products_table --table=products
 
 php artisan migrate
+
+php artisan tinker (parecido com o select)
